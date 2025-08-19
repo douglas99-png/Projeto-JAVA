@@ -1,47 +1,28 @@
-package br.com.douglas.projeto.entity.projeto;
+package br.com.douglas.projeto.dto.projeto;
 
 import org.springframework.beans.BeanUtils;
 
-import br.com.douglas.projeto.dto.projeto.UsuarioDto;
-import jakarta.annotation.Generated;
+import br.com.douglas.projeto.entity.projeto.UsuarioEntity;
 import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
 
-@SuppressWarnings("unused")
-@Entity
-@Table(name = "NPL_USUARIO")
-public class UsuarioEntity {
+public class UsuarioDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(nullable = false)
     private String nome;
-
-    @Column(nullable = false, unique = true)
     private String login;
-
-    @Column(nullable = false)
     private String senha;
-
-    @Column(nullable = false)
     private String email;
 
-    // contrutor para converter de DTO para entity
-    public UsuarioEntity (UsuarioDto usuario) {
+
+  // contrutor para converter de entity p/ DTO
+    public UsuarioDto (UsuarioEntity usuario) {
         BeanUtils.copyProperties(usuario, this);
     }
 
-      public UsuarioEntity () {
-        
+     public UsuarioDto () {
     }
 
-    public Long getId() {
+     public Long getId() {
         return this.id;
     }
 
@@ -83,3 +64,4 @@ public class UsuarioEntity {
 
 
 }
+
