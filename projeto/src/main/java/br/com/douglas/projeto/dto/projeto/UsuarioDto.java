@@ -3,7 +3,6 @@ package br.com.douglas.projeto.dto.projeto;
 import org.springframework.beans.BeanUtils;
 
 import br.com.douglas.projeto.entity.projeto.UsuarioEntity;
-import jakarta.persistence.Column;
 
 public class UsuarioDto {
 
