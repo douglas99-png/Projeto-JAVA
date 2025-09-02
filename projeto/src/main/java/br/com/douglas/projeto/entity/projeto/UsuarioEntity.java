@@ -3,7 +3,6 @@ package br.com.douglas.projeto.entity.projeto;
 import org.springframework.beans.BeanUtils;
 
 import br.com.douglas.projeto.dto.projeto.UsuarioDto;
-import jakarta.annotation.Generated;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,7 +10,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@SuppressWarnings("unused")
 @Entity
 @Table(name = "NPL_USUARIO")
 public class UsuarioEntity {

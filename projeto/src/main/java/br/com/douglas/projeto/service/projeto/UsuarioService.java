@@ -2,8 +2,6 @@ package br.com.douglas.projeto.service.projeto;
 
 import java.util.List;
 
-import javax.swing.UIClientPropertyKey;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,8 +19,8 @@ public class UsuarioService {
         List<UsuarioEntity> usuarios = usuarioRepository.findAll();
         return usuarios.stream().map(UsuarioDto::new).toList();
     }
-        public void inserir(UsuarioDto usuario) {
-            UsuarioEntity entity = new UsuarioEntity(usuario);
+        public void inserir(UsuarioDto usuarioDto) {
+            UsuarioEntity entity = new UsuarioEntity();
             usuarioRepository.save(entity);
         }   
         public void atualizar(UsuarioDto usuario) {
